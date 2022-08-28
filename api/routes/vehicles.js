@@ -32,8 +32,17 @@ router.post('/', async (req, res) => {
 router.put('/:id', async (req, res) => {
   try {
     const { id } = req.params;
+    const updatedVehicle = await Vehicles.update(req.body, {where: { id: id }})
     const vehicle = await Vehicles.findOne({ where: { id } });
-    const updatedVehicle = await Vehicles.update(req.body, {where: { id: vehicle.id }})
+    res.status(201).send(vehicle)
+  } catch (error) {res.status(400).send(error)}
+});
+
+router.delete('/:id', async (req, res) => {
+  try {
+    const { id } = req.params;
+    const updatedVehicle = await Vehicles.update(req.body, {where: { id: id }})
+    const vehicle = await Vehicles.findOne({ where: { id } });
     res.status(201).send(vehicle)
   } catch (error) {res.status(400).send(error)}
 });
