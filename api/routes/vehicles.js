@@ -5,8 +5,8 @@ const { Vehicles } = require('../models');
 
 router.get('/', async (req, res) => {
   try {
-    const company = await Vehicles.findAll();
-    res.status(200).send(company);
+    const vehicles = await Vehicles.findAll();
+    res.status(200).send(vehicles);
   } catch (error) {res.status(400).send(error)}
 });
 

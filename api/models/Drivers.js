@@ -23,14 +23,14 @@ Drivers.init(
           msg: 'Email address already in use!'
       }
     },
-    country: {
+/*     country: {
       type: S.STRING,
       allowNull: false,
     },
     city: {
       type: S.STRING,
       allowNull: false,
-    },
+    }, */
   },
   { sequelize: db, modelName: 'drivers' }
 );
