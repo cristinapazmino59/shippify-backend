@@ -1,6 +1,6 @@
 const express = require('express');
-const { Op } = require('sequelize');
 const router = express.Router();
+const { Op } = require('sequelize');
 const { Vehicles } = require('../models');
 
 router.get('/', async (req, res) => {
@@ -41,9 +41,8 @@ router.put('/:id', async (req, res) => {
 router.delete('/:id', async (req, res) => {
   try {
     const { id } = req.params;
-    const updatedVehicle = await Vehicles.update(req.body, {where: { id: id }})
-    const vehicle = await Vehicles.findOne({ where: { id } });
-    res.status(201).send(vehicle)
+  await Vehicles.destroy({where: { id: id }})
+    res.status(200).send("Deleted!")
   } catch (error) {res.status(400).send(error)}
 });
 

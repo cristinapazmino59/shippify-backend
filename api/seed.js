@@ -68,34 +68,42 @@ Drivers.bulkCreate([
 Vehicles.bulkCreate([
   {
     type: 'van',
-    driverId: 1,
+    color: 'blue',
+    plate: 'ABC1234'
   },
   {
     type: 'motorcycle',
-    driverId: 2,
+    color: 'white',
+    plate: 'DEF1234'
   },
   {
     type: 'car',
-    driverId: 3,
+    color: 'black',
+    plate: 'ABC1154'
   },
   {
     type: 'truck',
-    driverId: 4,
+    color: 'yellow',
+    plate: 'DEF2345'
   },
   {
     type: 'motorcycle',
-    driverId: 1,
+    color: 'light blue',
+    plate: 'PIC1234'
   },
   {
     type: 'car',
-    driverId: 1,
+    color: 'brown',
+    plate: 'CAR5678'
   },
   {
     type: 'van',
-    driverId: 2,
+    color: 'green',
+    plate: 'GUA1234'
   },
   {
     type: 'bicycle',
-    driverId: 3,
+    color: 'pink',
+    plate: 'IMB1234'
   },
 ]);
