@@ -5,9 +5,10 @@ Before run the server, you must create a MYSQL database with the following crede
 ### `user: root`
 ### `password: password`
 
-In the project directory you must run:
+In the project directory (shippify-backend) you must run:
 ### `npm i`
 ### `npm start`
+### `npm run seed`
 
 The following dependencies/libraries/frameworks were used:
 ### `nodeJS 12.22.7`
