@@ -31,5 +31,13 @@ router.post('/', async (req, res) => {
     }
   });
 
+router.put('/:id', async (req, res) => {
+    try {
+      const { id } = req.params;
+      const updatedDriver = await Drivers.update(req.body, {where: { id: id }})
+      const driver = await Drivers.findOne({ where: { id } });
+      res.status(201).send(driver)
+    } catch (error) {res.status(400).send(error)}
+});
 
 module.exports = router;
